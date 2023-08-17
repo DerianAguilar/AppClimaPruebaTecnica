@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.MainActivity"
+        android:background="@color/blue_secondary"
+>
+
+    <View
+            android:id="@+id/pBusqueda"
+            android:background="@drawable/rounded_corner_background"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="-34dp"
+            app:circularflow_defaultRadius="10dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingrese la ciudad:"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toTopOf="@id/txtCiudad"
+            app:layout_constraintStart_toStartOf="@id/pBusqueda"
+            app:layout_constraintEnd_toEndOf="@id/pBusqueda"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+    />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:text="Consultar Clima"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnConsultar"
+            android:background="@drawable/btn_bg"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pBusqueda"
+            app:layout_constraintEnd_toEndOf="@+id/pBusqueda"
+            app:layout_constraintTop_toBottomOf="@+id/txtPais"
+            android:layout_marginTop="25dp"
+    />
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="299dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/pBusqueda"
+            app:layout_constraintStart_toStartOf="@+id/pBusqueda"
+            app:layout_constraintTop_toTopOf="@+id/pBusqueda"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/input_main"
+            app:layout_constraintHorizontal_bias="0.496"
+            android:id="@+id/txtCiudad"
+    >
+        <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ems="10"
+                android:id="@+id/txtBuscar" android:layout_weight="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingrese el pais:"
+            android:id="@id/tPais"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toStartOf="@id/pBusqueda"
+            app:layout_constraintEnd_toEndOf="@id/pBusqueda"
+            app:layout_constraintTop_toBottomOf="@id/txtCiudad"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+    />
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="299dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/pBusqueda"
+            app:layout_constraintStart_toStartOf="@+id/pBusqueda"
+            app:layout_constraintTop_toBottomOf="@+id/tPais"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_main"
+            app:layout_constraintHorizontal_bias="0.496"
+            android:id="@+id/txtPais"
+    >
+        <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ems="10"
+                android:id="@+id/txtBuscarPais" android:layout_weight="1" android:textColorLink="#009688"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView
+            android:src="@drawable/imgappclima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_marginTop="100sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
