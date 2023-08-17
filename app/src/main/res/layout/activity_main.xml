@@ -40,11 +40,12 @@
             android:id="@+id/btnConsultar"
             android:background="@drawable/btn_bg"
             android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/pBusqueda"
             app:layout_constraintEnd_toEndOf="@+id/pBusqueda"
             app:layout_constraintTop_toBottomOf="@+id/txtPais"
-            android:layout_marginTop="25dp"
+            app:layout_constraintBottom_toBottomOf="@id/pBusqueda"
     />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -64,6 +65,7 @@
                 android:inputType="textPersonName"
                 android:singleLine="true"
                 android:maxLines="1"
+                android:background="@drawable/input_main"
                 android:ems="10"
                 android:id="@+id/txtBuscar" android:layout_weight="1"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -100,6 +102,7 @@
                 android:inputType="textPersonName"
                 android:singleLine="true"
                 android:maxLines="1"
+                android:background="@drawable/input_main"
                 android:ems="10"
                 android:id="@+id/txtBuscarPais" android:layout_weight="1" android:textColorLink="#009688"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,10 +111,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView"
-            android:layout_marginTop="100sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/pBusqueda"
     />
 
 

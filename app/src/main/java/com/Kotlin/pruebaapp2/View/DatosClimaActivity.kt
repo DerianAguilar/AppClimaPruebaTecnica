@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.Kotlin.pruebaapp2.R
+import java.util.*
 
 class DatosClimaActivity : AppCompatActivity() {
 
@@ -27,10 +28,11 @@ class DatosClimaActivity : AppCompatActivity() {
         var temperatura = intent.getDoubleExtra("temperatura", 0.0)
         var sensacionT = intent.getDoubleExtra("sensacionT", 0.0)
         val humedad = intent.getDoubleExtra("humedad", 0.0)
-        val ciudad = intent.getStringExtra("ciudad")
+        var ciudad = intent.getStringExtra("ciudad")
 
         temperatura -= 273.15
         sensacionT -= 273.15
+        ciudad = ciudad?.split(" ")?.joinToString(" ") { it.capitalize(Locale.ROOT) }
 
         tvCiudad.text = "$ciudad"
         tvTemperatura.text = "${temperatura.toInt()}°C"

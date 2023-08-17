@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         txtCiudad = findViewById<AppCompatEditText>(R.id.txtBuscar)
         txtPais = findViewById<AppCompatEditText>(R.id.txtBuscarPais)
 
+
         btnConsultar.setOnClickListener{
             var ciudad = txtCiudad.text.toString()
             ciudad = ciudad.trim()
@@ -60,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                         val datosRespuesta = response.body()
                         mostrarResultados(datosRespuesta, nameCiudad)
                     }else {
-                        Toast.makeText(this@MainActivity, "Error en la peticion al API", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, "No se encontro la ciudad", Toast.LENGTH_SHORT).show()
                     }
                 }
 
